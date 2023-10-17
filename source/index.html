@@ -1,14 +1,175 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <script src="js/script.js" defer></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drink2Go</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple.png">
+  <link rel="manifest" href="manifest.webmanifest"> -->
+  <!-- <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous"> -->
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <nav class="header__nav nav main-nav--close">
+      <a class="nav__logo nav__logo--current">
+        <img src="" alt="Логотип Drink2Go" width="" height="">
+      </a>
+      <h1 class="nav__title">Интернет-магазин кофейных напитков</h1>
+      <ul class="nav__list">
+        <li class="nav__item nav__item--current">
+          <a class="nav__link">
+            Главная
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Каталог
+          </a>
+          <a class="nav__link" href="#">
+            Доставка
+          </a>
+          <a class="nav__link" href="#">
+            О нас
+          </a>
+        </li>
+      </ul>
+      <ul class="nav__list user-nav">
+        <li class="user-nav__item user-nav__item--current">
+          <a class="main-nav__link">
+            Войти
+          </a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__link" href="#">
+            Корзина
+          </a>
+        </li>
+        <li class="user-nav">
+          <button class="user-nav__toggle js-toggle-button" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page__main">
+    <section class="hero">
+      <h2 class="visually-hidden">Ознакомьтесь с нашими новинками!</h2>
+      <button class="hero__button slider-button-prev"></button>
+      <div class="hero__good-card good-card">
+        <img src="" alt="">
+        <span class="good-card__badge">Новинка!</span>
+        <h3 class="good-card__title">Декаф Флэт Уайт</h3>
+        <p class="good-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
+          то, что нужно для расслабления после тяжёлого рабочего дня</p>
+        <span class="good-card__previous-price">295&#8381</span>
+        <span class="good-card__actual-price">225&#8381</span>
+        <button class="good-card__to-order" type="button">Заказать</button>
+      </div>
+      <ol class="hero__slider-pagination slider-pagination">
+        <li class="slider-pagination__item">
+          <button class="slider-pagination__toggle"></button>
+          <button class="slider-pagination__toggle"></button>
+          <button class="slider-pagination__toggle"></button>
+        </li>
+      </ol>
+      <button class="hero__button slider-button-next"></button>
+    </section>
+
+    <section class="features">
+      <h2 class="features__title title">Преимущества</h2>
+      <p class="features__description">Главные причины выбрать Drink2Go</p>
+      <ul class="features__list">
+        <li class="features__item feature">
+          <h3 class="feature__title">Скорость</h3>
+          <p class="feature__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li class="features__item feature">
+          <h3 class="feature__title">Удобство</h3>
+          <p class="feature__description">Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li class="features__item feature">
+          <h3 class="feature__title">Бодрость</h3>
+          <p class="feature__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li class="features__item feature">
+          <h3 class="feature__title">Экологичность</h3>
+          <p class="feature__description">Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
+    <section class="catalog">
+      <h2 class="catalog__title">Каталог</h2>
+      <p class="catalog__description">Каталог кофейных напитков</p>
+      <form class="catalog__filters filters" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="catalog__filter range-slider">
+          <legend class="filter__title">Цена</legend>
+          <div class="range-slider__scale">
+            <div class="range-slider__bar">
+              <button class="range-slider__toggle range-slider__toggle--min" type="button">
+                <span class="visually-hidden">Изменить минимальную стоимость.</span>
+              </button>
+              <button class="range-slider__toggle range-slider__toggle--max" type="button">
+                <span class="visually-hidden">Изменить максимальную стоимость.</span>
+              </button>
+            </div>
+          </div>
+          <div class="range-slider__inputs">
+            <input class="range-slider__input" type="number" value="0" name="min-price">
+            <span class="visually-hidden">От</span>
+            <input class="range-slider__input" type="number" value="900" name="max-price">
+            <span class="visually-hidden">До</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="catalog__filter">
+          <legend class="filter__title">Наличие молока</legend>
+          <ul class="filter__list">
+            <li class="filter__item control-item">
+              <label class="control-item__name">
+                <input class="control-item__input control-item__input--radio visually-hidden" type="radio"
+                  value="does-not-matter" name="milk-type" checked>
+                <span class="control-item__mark control-item__mark--radio"></span>
+                Неважно
+              </label>
+            </li>
+            <label class="control-item__name">
+              <input class="control-item__input control-item__input--radio visually-hidden" type="radio"
+                value="animal-milk" name="milk-type">
+              <span class="control-item__mark control-item__mark--radio"></span>
+              Только животное
+            </label>
+            </li>
+            <label class="control-item__name">
+              <input class="control-item__input control-item__input--radio visually-hidden" type="radio"
+                value="plant-milk" name="milk-type">
+              <span class="control-item__mark control-item__mark--radio"></span>
+              Только растительное
+            </label>
+            </li>
+            <label class="control-item__name">
+              <input class="control-item__input control-item__input--radio visually-hidden" type="radio"
+                value="without-milk" name="milk-type" disabled>
+              <span class="control-item__mark control-item__mark--radio"></span>
+              Без молока
+            </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="">
+
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+
 </html>
