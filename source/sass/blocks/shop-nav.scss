@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.shop-nav__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 62px;
+    margin-right: -126px;
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 2px;
+  }
+}
+
+.shop-nav__list--closed {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.shop-nav__list--opened {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  transform: translateX(-30%);
+  background-color: $base-white;
+  width: 320px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
+.shop-nav__item a {
+  display: block;
+  color: $base-black;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  font-family: "montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shop-nav__item {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 12px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 12px 30px;
+  }
+}
+
+.shop-nav__item::after {
+  @media (max-width: $mobile-width-only) {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 1px;
+    background-color: $base-secondary;
+  }
+}
+
+.shop-nav__item:first-child::before {
+  @media (max-width: $mobile-width-only) {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 1px;
+    background-color: $base-secondary;
+  }
+}
+
+.shop-nav__item--current a {
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+  }
+}
+
+.shop-nav__item--current a::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 103px;
+    height: 2px;
+    background-color: $base-primary;
+  }
+}

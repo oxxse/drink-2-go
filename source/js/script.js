@@ -1,1 +1,3 @@
-/* в этот файл добавляет скрипты*/
+import { getSwitcher } from "./shop-nav.js";
+
+getSwitcher();

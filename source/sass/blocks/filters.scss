@@ -1,0 +1,175 @@
+.catalog__filters {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    padding-left: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-top: -52px;
+  }
+}
+
+.catalog__filter {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  align-items: flex-start;
+}
+
+
+.catalog__filter--milk {
+  margin-bottom: 12px;
+}
+
+.catalog__filter--country {
+  margin-bottom: 0;
+}
+
+.filter__title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-black;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+
+.filter__title--price {
+  margin-bottom: 30px;
+}
+
+.filter__item-input-name {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-black;
+}
+
+[type="checkbox"]:disabled ~ .filter__item-input-name {
+  color: $base-grey;
+}
+
+[type="radio"]:disabled ~ .filter__item-input-name {
+  color: $base-grey;
+}
+
+.filter__inputs-wrapper {
+  display: flex;
+  gap: 18px;
+  margin-top: 36px;
+
+  @media (min-width: $tablet-width) {
+    gap: 18px;
+  }
+}
+
+.filter__input {
+  width: 94px;
+  height: 20px;
+  border-radius: 4px;
+  border: solid 2px $primary-lighter;
+  padding: 8px 10px;
+  margin: 0;
+  color: $base-black;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 67px;
+    padding: 5px 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 114px;
+    padding: 5px 9px;
+  }
+}
+
+.filter__inputs-divider {
+  display: block;
+  width: 8px;
+  position: relative;
+}
+
+.filter__inputs-divider::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.range-slider {
+  position: relative;
+  height: 2px;
+  background-color: $light-grey;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.range-slider__bar {
+  position: relative;
+  height: 2px;
+  width: 260px;
+  background-color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 295px;
+  }
+}
+
+.range-slider__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 2px solid $primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.range-slider__toggle--max {
+  top: -10px;
+  right: 0;
+}
+
+.range-slider__toggle--min {
+  top: -10px;
+  left: 0;
+}

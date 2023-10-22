@@ -1,7 +1,14 @@
 /* GLOBAL */
+@import "global/fonts";
 @import "global/variables";
 @import "global/global";
-@import "global/fonts";
 
 /* BLOCKS */
+@import "blocks/page";
 @import "blocks/header";
+@import "blocks/hero";
+@import "blocks/shop-nav";
+@import "blocks/features";
+@import "blocks/filters";
+@import "blocks/catalog";
+@import "blocks/footer";

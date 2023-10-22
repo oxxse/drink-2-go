@@ -1,4 +1,4 @@
-.main-header {
+.header {
   color: $base-black;
   min-height: 60px;
   display: flex;
@@ -8,6 +8,7 @@
 .user-nav {
   display: flex;
   flex-direction: row;
+  margin-left: auto;
 
   @media (min-width: $tablet-width) {
     align-self: center;
@@ -20,13 +21,14 @@
   }
 }
 
-.main-header__logo {
+.header__logo {
   padding-top: 12px;
   padding-left: 20px;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
     padding-top: 22px;
+    margin-right: 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -95,7 +97,7 @@
   box-shadow: 0 4px 0 0 $base-black, 0 8px 0 0 $base-black;
 }
 
-.main-header__logo-description {
+.header__logo-description {
   color: $base-black;
   font-size: 12px;
   font-family: "Montserrat", "Arial", sans-serif;
