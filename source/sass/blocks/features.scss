@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 102px;
+    padding-top: 101px;
   }
 }
 
@@ -49,7 +49,7 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 24px;
-    padding: 0 24px 142px;
+    padding: 0 33px 118px;
   }
 }
 
@@ -101,7 +101,7 @@
 }
 
 .features__item--comfort {
-  padding: 62px 44px 0 44px;
+  padding: 64px 44px 0 44px;
   background-image: url("/images/icons/stack.svg#fit");
   background-repeat: no-repeat;
   background-size: 50px auto;
@@ -129,9 +129,9 @@
 
 @media (min-width: $tablet-width) {
   .features__item {
-      padding: 0;
-      padding-left: 78px;
-    }
+    padding: 0;
+    padding-left: 78px;
+  }
 
   .features__item--speed {
     background-repeat: no-repeat;
@@ -163,29 +163,28 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .features__item {
     padding: 0;
   }
 
   .features__item--speed {
     background-position-x: center;
-    background-position-y: -50px;
+    background-position-y: -54px;
   }
 
   .features__item--comfort {
     background-position-x: center;
-    background-position-y: -50px;
+    background-position-y: -53px;
   }
 
   .features__item--energy {
     background-position-x: center;
-    background-position-y: -50px;
+    background-position-y: -54px;
   }
 
   .features__item--eco {
     background-position-x: center;
-    background-position-y: -50px;
+    background-position-y: -54px;
   }
 }
 
@@ -211,9 +210,7 @@
     text-align: center;
     padding-top: 84px;
   }
-}
 
-.feature__title {
   @media (max-width: $mobile-width-only) {
     padding-bottom: 3px;
   }
@@ -238,7 +235,15 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    padding: 0 10px 0 10px;
+    padding: 0 10px 0 9px;
+  }
+}
+
+.features__desktop-break {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 

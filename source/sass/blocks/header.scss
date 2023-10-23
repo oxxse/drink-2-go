@@ -17,7 +17,7 @@
 
   @media (min-width: $desktop-width) {
     align-self: center;
-    padding-right: 36px;
+    padding-right: 35px;
   }
 }
 
@@ -36,7 +36,7 @@
     display: flex;
     gap: 20px;
     margin-left: 16px;
-    margin-right: 20px;
+    margin-right: 154px;
   }
 }
 
@@ -57,7 +57,15 @@
   @media (min-width: $desktop-width) {
     display: flex;
     gap: 8px;
-    padding: 32px 28px;
+    padding: 32px 32px 32px 28px;
+  }
+}
+
+.user-nav__shop-basket {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 8px;
+    padding: 32px 25px 32px 28px;
   }
 }
 
@@ -86,16 +94,37 @@
   }
 }
 
-.user-nav .user-nav__toggle::before {
+.user-nav .user-nav__toggle--burger::before {
   content: "";
   position: absolute;
-  top: 26px;
+  top: 25px;
   right: 22px;
   width: 16px;
   height: 1px;
   background-color: $base-black;
-  box-shadow: 0 4px 0 0 $base-black, 0 8px 0 0 $base-black;
+  box-shadow: 0 4px 0 0 $base-black, 0 9px 0 0 $base-black;
 }
+
+.user-nav .user-nav__toggle--cross::before,
+.user-nav .user-nav__toggle--cross::after {
+  content: "";
+  box-shadow: none;
+  position: absolute;
+  top: 29px;
+  right: 22px;
+  width: 16px;
+  height: 1px;
+  background-color: $base-black;
+}
+
+.user-nav .user-nav__toggle--cross::before {
+  transform: rotate(45deg);
+}
+
+.user-nav .user-nav__toggle--cross::after {
+  transform: rotate(-45deg);
+}
+
 
 .header__logo-description {
   color: $base-black;
@@ -105,5 +134,32 @@
 
   @media (max-width: $desktop-width-only) {
     display: none;
+  }
+}
+
+.user-nav__login:hover,
+.user-nav__login:focus,
+.user-nav__shop-basket:hover,
+.user-nav__shop-basket:focus {
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+
+    path {
+      fill: $base-primary;
+    }
+  }
+}
+
+.user-nav__login:active,
+.user-nav__shop-basket:active,
+.user-nav__toggle:active {
+  background-color: $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+
+    path {
+      fill: $base-primary;
+    }
   }
 }

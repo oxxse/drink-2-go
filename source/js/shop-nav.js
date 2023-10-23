@@ -8,9 +8,13 @@ const getSwitcher = () => {
     if (shopNav.classList.contains('shop-nav__list--closed')) {
       shopNav.classList.remove('shop-nav__list--closed');
       shopNav.classList.add('shop-nav__list--opened');
+      navToggle.classList.remove('user-nav__toggle--burger');
+      navToggle.classList.add('user-nav__toggle--cross');
     } else {
       shopNav.classList.add('shop-nav__list--closed');
       shopNav.classList.remove('shop-nav__list--opened');
+      navToggle.classList.add('user-nav__toggle--burger');
+      navToggle.classList.remove('user-nav__toggle--cross');
     }
   });
 };

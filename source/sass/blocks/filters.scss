@@ -29,7 +29,7 @@
 
 
 .catalog__filter--milk {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .catalog__filter--country {
@@ -50,7 +50,7 @@
 
 
 .filter__title--price {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .filter__item-input-name {
@@ -73,10 +73,11 @@
 .filter__inputs-wrapper {
   display: flex;
   gap: 18px;
-  margin-top: 36px;
+  margin-top: 34px;
 
   @media (min-width: $tablet-width) {
-    gap: 18px;
+    gap: 20px;
+    margin-top: 32px;
   }
 }
 
@@ -96,13 +97,13 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 67px;
-    padding: 5px 9px;
+    width: 65px;
+    padding: 8px 9px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 114px;
-    padding: 5px 9px;
+    width: 112px;
+    padding: 8px 9px;
   }
 }
 
@@ -167,6 +168,10 @@
 .range-slider__toggle--max {
   top: -10px;
   right: 0;
+
+  @media (min-width: $tablet-width) {
+    right: -2px;
+  }
 }
 
 .range-slider__toggle--min {

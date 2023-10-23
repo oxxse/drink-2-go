@@ -1,3 +1,3 @@
-import { getSwitcher } from "./shop-nav.js";
+import { getSwitcher } from './shop-nav.js';
 
 getSwitcher();

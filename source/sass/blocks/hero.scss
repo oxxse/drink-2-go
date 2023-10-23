@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -1px;
+  }
 }
 
 .hero__card-wrapper {
@@ -15,9 +19,9 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    gap: 42px;
+    gap: 33px;
     min-width: 1255px;
-    padding-top: 36px;
+    padding-top: 33px;
     position: relative;
   }
 }
@@ -43,6 +47,7 @@
     transform: none;
     padding: 0;
     margin: 0;
+    margin-left: 12px;
   }
 }
 
@@ -53,7 +58,7 @@
   @media (min-width: $desktop-width) {
     justify-content: start;
     text-align: start;
-    padding-top: 20px;
+    padding-top: 24px;
   }
 }
 
@@ -247,7 +252,7 @@
     list-style-type: none;
     gap: 8px;
     position: absolute;
-    top: 600px;
+    top: 707px;
     left: 50%;
     transform: translateX(-50%);
   }
